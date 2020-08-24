@@ -10,6 +10,7 @@ const getFood = async (req, res) => {
       food: favoriteFoods[Math.floor(Math.random() * favoriteFoods.length)],
     })
   } catch (error) {
+    console.error(error)
     return res.status(401).send('You are unauthorised')
   }
 }
